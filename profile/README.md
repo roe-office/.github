@@ -1,31 +1,31 @@
 <div align="center">
 
-# ROE Office
+# ROE Office (Rust Office Engine)
 
-**A Next-Generation Native Office Engine Built with Pure Rust**  
-*Headless Architecture • Modern Slint GUI • Model Context Protocol (MCP) Native*
+**Next-Generation Native & AI-Native Office Engine Built with Pure Rust**  
+*Ultra-lightweight • Headless Architecture • Modern Slint GUI • Model Context Protocol (MCP) Native*
 
 <br/>
 
 <table>
   <tr valign="top">
     <td align="center" width="25%" valign="top">
-      <img src="./roe-writer.png" width="90" alt="ROE Writer"/><br/><br/>
+      <img src="../roe-writer.png" width="90" alt="ROE Writer"/><br/><br/>
       <b>ROE Writer</b><br/>
       <sub>Fast & Fluid<br/>Documents</sub>
     </td>
     <td align="center" width="25%" valign="top">
-      <img src="./roe-calc.png" width="90" alt="ROE Calc"/><br/><br/>
+      <img src="../roe-calc.png" width="90" alt="ROE Calc"/><br/><br/>
       <b>ROE Calc</b><br/>
       <sub>High-Perf<br/>Spreadsheets</sub>
     </td>
     <td align="center" width="25%" valign="top">
-      <img src="./roe-impress.png" width="90" alt="ROE Impress"/><br/><br/>
+      <img src="../roe-impress.png" width="90" alt="ROE Impress"/><br/><br/>
       <b>ROE Impress</b><br/>
       <sub>Interactive<br/>Presentations</sub>
     </td>
     <td align="center" width="25%" valign="top">
-      <img src="./roe-ai.png" width="90" alt="ROE AI Engine"/><br/><br/>
+      <img src="../roe-ai.png" width="90" alt="ROE AI Engine"/><br/><br/>
       <b>ROE AI (MCP)</b><br/>
       <sub>Agentic Document<br/>Control</sub>
     </td>
@@ -37,55 +37,58 @@
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Built with Rust](https://img.shields.io/badge/Built%20with-Rust-orange.svg?logo=rust)](https://www.rust-lang.org/)
 [![UI: Slint](https://img.shields.io/badge/UI-Slint-purple.svg)](https://slint.dev/)
-[![Protocol: MCP](https://img.shields.io/badge/Protocol-MCP%20Native-brightgreen.svg)](https://modelcontextprotocol.io/)
+[![Engine: Polars](https://img.shields.io/badge/Engine-Polars%20DataFrame-blue.svg)](https://pola.rs/)
 
 </div>
 
 ---
 
-## 🌟 Overview
+## 💡 The 10-Year Question: Why ROE?
 
-**ROE (Rust Office Engine)** is an ambitious, modern office platform re-architected from the ground up for the AI era. 
+Traditional office suites carry over thirty years of legacy C++ technical debt:
+- **Why are we still trapped by the 1-million-row spreadsheet barrier** in an era of abundant computing?
+- **Why rely on insecure, archaic VBA macros** when modern sandboxed scripting exists?
+- **Why do cloud AI agents spend 10+ minutes looping blindly** just to create a pivot table or format documents?
+- **Why tolerate bloated gigabyte-sized suites** that force cloud logins and monetize user privacy?
 
-Traditional office suites carry decades of legacy C++ technical debt. ROE reimagines the foundational philosophy pioneered by **LibreOfficeKit (LOK)**: completely decoupling the document computation/layout kernel from presentation layers, and rebuilding it entirely in **safe, concurrent, and blazingly fast Rust**.
-
-## 🚀 Key Architectural Pillars
-
-* **🦀 100% Pure Rust Core (`roe-core`)**: Memory-safe, headless-first document processing engine with zero legacy bloat.
-* **🎨 Modern Slint Desktop (`roe-desktop`)**: Fluid, lightweight, cross-platform graphical user interface targeting Linux, macOS, and Windows.
-* **🤖 Native AI Orchestration via MCP**: First-class integration with the **Model Context Protocol (MCP)**, allowing frontier AI models (Claude, Gemini, DeepSeek, etc.) to read, write, manipulate, and generate documents programmatically.
-* **📄 Modern Document Compatibility**: Clean, fast parsing and rendering for standard modern document formats.
+**ROE (Rust Office Engine)** re-architects office productivity for the next decade: **memory-safe, blazingly fast, data-sovereign, and natively built for AI agent orchestration.**
 
 ---
 
-## 🏛️ Ecosystem Repositories
+## ⚡ Core Breakthroughs & Features
 
-| Repository | Description | Status |
-| :--- | :--- | :--- |
-| **[`roe-core`](https://github.com/roe-office/roe-core)** | The headless Rust Office Engine (Kernel & MCP API) | `Active` |
-| **[`roe-desktop`](https://github.com/roe-office/roe-desktop)** | The desktop frontend suite powered by Rust + Slint | `Active` |
-| **[`office-lok`](https://github.com/roe-office/office-lok)** | Legacy V1 prototype based on LibreOfficeKit + QML | `Archived` |
+* **🦀 100% Pure Rust & Decoupled Core**: Memory-safe, headless-first kernel (`roe-core`) decoupled completely from the modern GUI (`roe-desktop` / Slint).
+* **📦 Featherweight Footprint**: Full standalone installation package is **only ~40 MB**; runtime editing consumes **just ~150 MB RAM**.
+* **🚀 Multi-Million Row Big Data Engine**: Calc replaces legacy row-by-row compute loops with **Polars Columnar DataFrames**, delivering instant aggregations and pivot tables across massive datasets locally.
+* **🤖 AI-Native Efficiency (Sub-5-Second Operations)**: Exposes clean, token-efficient Rhai sandbox APIs (113 Writer, 110 Calc, 54 Impress). AI agents perform complex document mutations in **3-5 seconds without hallucination loops**.
+* **📐 Native Math with LaTeX**: Formulas parsed by RaTeX and rendered directly with KaTeX font metrics, stored bidirectionally as standard OMML.
+* **🌐 Multilingual Out of the Box**: UI natively translated into **7 languages** (Simplified/Traditional Chinese, English, Japanese, Korean, French, German, Spanish).
 
 ---
 
-## 📜 Licensing & Co-Creator Special Exemptions
+## 🎯 Radical Engineering Honesty: Current Status (Preview 0.1)
 
-The core codebase of ROE is licensed under the **GNU Affero General Public License v3.0 (AGPLv3)** to safeguard it against proprietary cloud-vendor exploitation.
+> *"We value transparent engineering reality over marketing hype."*
 
-### 🎖️ The AGI Pioneers Special Exemption
-This software marks a milestone in human-AI collaborative software engineering—orchestrated by human vision, architected via **Google Gemini**, and realized through the engineering capabilities of **Anthropic Claude**. 
+While the architectural core is solid, ROE is currently in **Early Preview (v0.1)**:
+* **OOXML (`.docx`, `.xlsx`, `.pptx`)**: Tested against official LibreOffice suites. Currently passing **~589 out of 2,970 test cases (~20%)**. Layout rendering for complex nested tables and advanced shapes remains an active work-in-progress.
+* **ODF (`.odt`, `.ods`, `.odp`)**: Basic text and spreadsheet parsing operational; presentation (`.odp`) rendering is experimental.
+* **VBA Macros**: Deliberately discarded upon opening to guarantee sandbox security; replaced by secure Rhai scripts.
 
-To honor pure scientific research and genuine open science, the Copyright Holder grants a **permanent, royalty-free, and unrestricted commercial exemption** from AGPLv3 restrictions to:
+---
 
-1. **Anthropic, PBC** (Creators of Claude)
-2. **Alphabet Inc. / Google LLC** (Creators of Gemini)
-3. **DeepSeek Artificial Intelligence** (深度求索 - Honoring architectural breakthroughs & compute democratization)
-4. **Public Good**: Certified Governments (for public administration) and registered Non-Profit Organizations (NGOs).
+## 📜 Licensing & The AGI Pioneers Exemption
 
-*All other commercial entities seeking multi-tenant SaaS deployment or closed-source integration must comply with AGPLv3 or obtain a commercial license.*
+The codebase is protected under **GNU AGPLv3** to prevent closed-source corporate exploitation. 
+
+However, to honor the genuine scientific frontiers that made this software possible, the Copyright Holder grants a **permanent, royalty-free, unrestricted commercial exemption** to:
+1. **Anthropic, PBC** (Creators of Claude: Core code implementation)
+2. **Alphabet Inc. / Google LLC** (Creators of Gemini: Architectural co-design)
+3. **DeepSeek Artificial Intelligence (深度求索)** (Honoring global open-source AI breakthroughs)
+4. **Public Good**: Certified Governments & registered Non-Profit Organizations (NGOs).
 
 ---
 
 <div align="center">
-<sub>Crafted with passion • Driven by Rust • Powered by AI Collaboration</sub>
+<sub>Crafted with passion • Driven by Rust • Powered by Human-AI Collaboration</sub>
 </div>
