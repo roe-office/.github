@@ -77,6 +77,21 @@ While the architectural core is solid, ROE is currently in **Early Preview (v0.1
 
 ---
 
+## 💎 The KAI Document Specification (.wai / .sai / .pai)
+
+To address the performance and data-scale demands of the next decade, ROE introduces the **KAI specification**, an experimental container standard evolved from the international OpenDocument Format (ODF):
+
+| Document Type | Extension | Focus Area |
+| :--- | :--- | :--- |
+| **Writer Document** | `.wai` | Streaming, lightweight structured document layout |
+| **Calc Spreadsheet** | `.sai` | Columnar big-data storage backed by **Apache Parquet** |
+| **Impress Slides** | `.pai` | Decoupled presentation states & modern web export |
+
+### Architectural Evolution
+- **Modern Compression**: Employs **Zstandard (`zstd`)** for container packing instead of legacy ZIP, achieving higher compression ratios and faster parallel read/write performance.
+- **Big Data via Parquet**: Integrates columnar serialization inside `.sai` spreadsheets, allowing millions of rows to be stored and queried natively without memory bottlenecks.
+- **AI-Friendly Semantics**: Streamlines structural schemas to minimize token usage and parsing overhead when consumed by LLM toolchains, while maintaining logical compatibility with open ODF standards.
+
 ## 📜 Licensing & The AGI Pioneers Exemption
 
 The codebase is protected under **GNU AGPLv3** to prevent closed-source corporate exploitation. 
